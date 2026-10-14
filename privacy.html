@@ -29,10 +29,10 @@
       <div class="card">
         <p><strong>The short version</strong></p>
         <ul>
-          <li>We collect only what the app needs to work: your account, your habits and the entries you write.</li>
+          <li>We collect only what the app needs to work: your account, your habits, the entries you write, and diagnostic data (crash and error reports) — see section 4.</li>
           <li>We do <strong>not</strong> sell your data and do <strong>not</strong> use it for advertising.</li>
           <li>The app has <strong>no</strong> analytics, no tracking and no advertising SDKs.</li>
-          <li>You can delete your account and all of its data from inside the app.</li>
+          <li>You can delete your account and its data from inside the app — see section 6.</li>
         </ul>
       </div>
 
@@ -79,9 +79,9 @@
       <p>If you turn on a reminder for a habit, the app asks for permission to send notifications. Reminders are scheduled <strong>locally on your device</strong>; we do not use a push-notification server and do not collect a push token. The reminder time is saved with the habit so it is restored on your account.</p>
 
       <h2>4. Third-party services</h2>
-      <p>The only third-party service that stores your data is <strong>Supabase</strong> (database and authentication), which processes it on our behalf to run the app. Data is sent to Supabase over an encrypted connection (HTTPS).</p>
+      <p>The app uses the following third-party services. <strong>Supabase</strong> (database and authentication) stores your account and app data on our behalf to run the app; data is sent to Supabase over an encrypted connection (HTTPS). <strong>Sentry</strong> (Functional Software, Inc.) receives error and crash reports for diagnostic purposes only, as described below.</p>
       <p>If you use <strong>Sign in with Apple</strong>, Apple verifies your identity and shares your name and email (or private relay address) with us, as described in section 1. Apple's handling of your Apple ID is covered by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
-      <p>The app uses <strong>Sentry</strong> (Functional Software, Inc.) for crash and error reporting. Sentry only activates in production builds and is disabled during development. When a crash or unhandled error occurs, Sentry may receive: your anonymous user ID (a UUID — never your email, name or any other identifying data), the error type, a stack trace, and the name of the screen where the error occurred. No screenshots, no text you have typed, and no URL query parameters are included. Sentry stores data in the United States. You can read Sentry's privacy policy at <a href="https://sentry.io/privacy/">sentry.io/privacy</a>.</p>
+      <p>We use <strong>Sentry</strong> (Functional Software, Inc.) to receive reports when the app crashes or an error occurs, for example when saving fails. A report contains your account ID (a random identifier — not your email or name), your device model, operating system version, app version, and technical details about the error. Before a report is sent, the app removes database contents and email addresses from error messages; your habits, journal entries and mood data are never included, and no screenshots or recordings are taken. Error reporting is off in development builds. Sentry stores this data in the United States for a limited period under its retention policy. See <a href="https://sentry.io/privacy/">Sentry's privacy policy</a>.</p>
       <p>The app contains no analytics, advertising or tracking SDKs. When we add further services in the future — for example in-app purchases processed by Apple — they will be listed here before they are used, together with what data they receive.</p>
 
       <h2>5. What we don't do</h2>
@@ -98,7 +98,7 @@
       <p>Deleting your account does not cancel an App Store subscription; cancel it in your Apple ID settings.</p>
 
       <h2>7. Data retention</h2>
-      <p>We keep your data for as long as your account exists. When you delete your account, your data is removed from the active database immediately. It may persist for a limited period in our hosting provider's infrastructure backups before being permanently removed.</p>
+      <p>We keep your data for as long as your account exists. When you delete your account, your data is removed from the active database immediately. It may persist for a limited period in our hosting provider's infrastructure backups before being permanently removed. Error reports already sent to Sentry are not linked to any remaining account after deletion and are deleted automatically when Sentry's retention period ends.</p>
 
       <h2>8. Your rights</h2>
       <p>You can view and edit your data in the app at any time, and delete it as described above. You can also email us to request a copy of your data, a correction, or deletion. Depending on where you live, you may have additional rights under local law (for example the GDPR or Brazil's LGPD); we will honour them.</p>
@@ -124,10 +124,10 @@
       <div class="card">
         <p><strong>Resumo</strong></p>
         <ul>
-          <li>Coletamos apenas o necessário para o app funcionar: sua conta, seus hábitos e o que você escreve.</li>
+          <li>Coletamos apenas o necessário para o app funcionar: sua conta, seus hábitos, o que você escreve e dados de diagnóstico (relatórios de falha e erro) — veja a seção 4.</li>
           <li><strong>Não</strong> vendemos seus dados e <strong>não</strong> os usamos para publicidade.</li>
           <li>O app <strong>não</strong> tem analytics, rastreamento nem SDKs de anúncios.</li>
-          <li>Você pode excluir sua conta e todos os dados dentro do próprio app.</li>
+          <li>Você pode excluir sua conta e seus dados de dentro do app — veja a seção 6.</li>
         </ul>
       </div>
 
@@ -174,9 +174,9 @@
       <p>Se você ativar um lembrete para um hábito, o app pede permissão para enviar notificações. Os lembretes são agendados <strong>localmente no aparelho</strong>; não usamos servidor de notificações push e não coletamos token de push. O horário do lembrete é salvo junto com o hábito para ser restaurado na sua conta.</p>
 
       <h2>4. Serviços de terceiros</h2>
-      <p>O único serviço de terceiros que armazena seus dados é a <strong>Supabase</strong> (banco de dados e autenticação), que os processa em nosso nome para o app funcionar. Os dados são enviados à Supabase por conexão criptografada (HTTPS).</p>
+      <p>O app usa os seguintes serviços de terceiros. A <strong>Supabase</strong> (banco de dados e autenticação) armazena sua conta e os dados do app em nosso nome para o app funcionar; os dados são enviados à Supabase por conexão criptografada (HTTPS). O <strong>Sentry</strong> (Functional Software, Inc.) recebe relatórios de erros e falhas apenas para fins de diagnóstico, conforme descrito abaixo.</p>
       <p>Se você usar <strong>Iniciar sessão com a Apple</strong>, a Apple verifica sua identidade e compartilha conosco seu nome e e-mail (ou endereço de retransmissão privado), como descrito na seção 1. O tratamento do seu ID Apple pela Apple segue a <a href="https://www.apple.com/br/legal/privacy/">Política de Privacidade da Apple</a>.</p>
-      <p>O app usa o <strong>Sentry</strong> (Functional Software, Inc.) para relatório de erros e falhas. O Sentry só ativa em builds de produção e fica desativado durante o desenvolvimento. Quando uma falha ou erro não tratado ocorre, o Sentry pode receber: seu ID de usuário anônimo (um UUID — nunca seu e-mail, nome ou outros dados identificadores), o tipo de erro, um rastreamento de pilha e o nome da tela onde o erro ocorreu. Nenhuma captura de tela, texto digitado ou parâmetro de URL é incluído. O Sentry armazena dados nos Estados Unidos. Você pode ler a política de privacidade do Sentry em <a href="https://sentry.io/privacy/">sentry.io/privacy</a>.</p>
+      <p>Usamos o <strong>Sentry</strong> (Functional Software, Inc.) para receber relatórios quando o app trava ou ocorre um erro — por exemplo, quando um salvamento falha. Um relatório contém seu ID de conta (um identificador aleatório — não seu e-mail nem seu nome), o modelo do aparelho, a versão do sistema operacional, a versão do app e detalhes técnicos sobre o erro. Antes de enviar um relatório, o app remove conteúdos de banco de dados e endereços de e-mail das mensagens de erro; seus hábitos, entradas do diário e dados de humor nunca são incluídos, e nenhuma captura de tela ou gravação é feita. O relatório de erros está desativado em builds de desenvolvimento. O Sentry armazena esses dados nos Estados Unidos por um período limitado conforme sua política de retenção. Consulte a <a href="https://sentry.io/privacy/">política de privacidade do Sentry</a>.</p>
       <p>O app não contém SDKs de analytics, publicidade ou rastreamento. Quando adicionarmos outros serviços no futuro — por exemplo compras no app processadas pela Apple — eles serão listados aqui antes de serem usados, junto com os dados que recebem.</p>
 
       <h2>5. O que não fazemos</h2>
@@ -193,7 +193,7 @@
       <p>Excluir a conta não cancela uma assinatura da App Store; cancele nos ajustes do seu ID Apple.</p>
 
       <h2>7. Retenção de dados</h2>
-      <p>Mantemos seus dados enquanto sua conta existir. Ao excluir a conta, os dados são removidos do banco de dados ativo imediatamente. Eles podem permanecer por um período limitado nos backups de infraestrutura do nosso provedor de hospedagem antes de serem removidos definitivamente.</p>
+      <p>Mantemos seus dados enquanto sua conta existir. Ao excluir a conta, os dados são removidos do banco de dados ativo imediatamente. Eles podem permanecer por um período limitado nos backups de infraestrutura do nosso provedor de hospedagem antes de serem removidos definitivamente. Relatórios de erro já enviados ao Sentry não ficam vinculados a nenhuma conta após a exclusão e são excluídos automaticamente quando o período de retenção do Sentry encerrar.</p>
 
       <h2>8. Seus direitos</h2>
       <p>Você pode ver e editar seus dados no app a qualquer momento e excluí-los como descrito acima. Também pode nos enviar um e-mail para pedir uma cópia dos seus dados, uma correção ou a exclusão. Dependendo de onde você mora, pode ter direitos adicionais pela lei local (por exemplo a LGPD ou o GDPR); nós os respeitaremos.</p>
