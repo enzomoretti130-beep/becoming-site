@@ -22,9 +22,9 @@
     <!-- ───────────── ENGLISH ───────────── -->
     <section class="lang" id="en" lang="en">
       <h1>Privacy Policy</h1>
-      <p class="meta">Effective date: October 14, 2026</p>
+      <p class="meta">Effective date: November 6, 2026</p>
 
-      <p>This policy explains what data <strong>Becoming</strong> (“the app”, “we”) collects, why, and where it is kept. The app is operated by Enzo Moretti, Sioux Falls, South Dakota, USA.</p>
+      <p>This policy explains what data <strong>Becoming</strong> ("the app", "we") collects, why, and where it is kept. The app is operated by Enzo Moretti, Sioux Falls, South Dakota, USA.</p>
 
       <div class="card">
         <p><strong>The short version</strong></p>
@@ -45,57 +45,61 @@
           </thead>
           <tbody>
             <tr><td><strong>Account (email sign-in):</strong> email address and password (the password is handled by Supabase Authentication and stored only in hashed form)</td><td>To sign you in and keep your data tied to your account</td></tr>
-            <tr><td><strong>Account (Sign in with Apple):</strong> the name and email address Apple shares with us. If you choose “Hide My Email”, this is a private relay address created by Apple, not your real email. Apple shares your name only the first time you sign in, and only if you allow it.</td><td>To sign you in and show your name in the app. The identity token Apple issues is used only to verify your sign-in and is not used for anything else</td></tr>
-            <tr><td><strong>Profile:</strong> display name, email, selected profession(s), whether onboarding is complete, whether you have Pro</td><td>To personalise the app, show the right screens and unlock Pro features</td></tr>
+            <tr><td><strong>Account (Sign in with Apple):</strong> the name and email address Apple shares with us. If you choose "Hide My Email", this is a private relay address created by Apple, not your real email. Apple shares your name only the first time you sign in, and only if you allow it.</td><td>To sign you in and show your name in the app. The identity token Apple issues is used only to verify your sign-in and is not stored</td></tr>
+            <tr><td><strong>Profile:</strong> display name, email, and whether onboarding is complete</td><td>To personalise the app and show the right screens</td></tr>
             <tr><td><strong>Onboarding answers</strong> (saved when you finish onboarding): age range, the challenges you chose (e.g. procrastination, sleep, focus, anxiety), your objectives, preferred intensity, profession(s)</td><td>To suggest habits that fit you</td></tr>
             <tr><td><strong>Habits:</strong> name, description, category, colour, icon, frequency and schedule (days, weekly target), reminder time and on/off, archive date, template used</td><td>To show and track your habits</td></tr>
             <tr><td><strong>Habit schedule history:</strong> frequency changes and the date they take effect</td><td>To calculate streaks and stats correctly after you change a habit</td></tr>
             <tr><td><strong>Check-ins:</strong> the dates you completed each habit, an optional note, and status (completed or day off)</td><td>To show progress, streaks and stats</td></tr>
             <tr><td><strong>Mood logs:</strong> date and mood value (1–5)</td><td>To show your mood history and charts</td></tr>
-            <tr><td><strong>Journal entries:</strong> date, entry type (free writing, reflection, weekly question), the text you write and the question shown</td><td>To keep your journal</td></tr>
+            <tr><td><strong>Journal entries:</strong> date, entry type (free writing, Lesson of the day, reflection, weekly question), the text you write, and the question shown for weekly-question entries. All journal text is stored in the same table with its type label.</td><td>To keep your journal</td></tr>
+            <tr><td><strong>Gratitude entries:</strong> date and up to three short texts you write each day in the Gratitude section of the journal</td><td>To keep your gratitude journal</td></tr>
             <tr><td><strong>Daily goals:</strong> date, text, done/not done</td><td>To show your goals for the day in the journal</td></tr>
-            <tr><td><strong>Goals:</strong> title, timeframe (short/medium/long), target date, completion date, and the steps you add</td><td>To track your longer-term goals</td></tr>
-            <tr><td><strong>Special days:</strong> date, type (competition, travel, rest, holiday, other), optional note</td><td>To mark days off without breaking your streaks</td></tr>
+            <tr><td><strong>Goals and goal steps:</strong> goal title, timeframe (short/medium/long), optional target date, completion date, and the step texts you add under each goal</td><td>To track your longer-term goals</td></tr>
+            <tr><td><strong>Special days:</strong> date, type (competition, travel, rest, holiday, other), optional note</td><td>To mark notable days in your journal, habit detail view and statistics</td></tr>
+            <tr><td><strong>Paused days:</strong> date, reason (travel, sick, rest), and an optional short note (up to 140 characters)</td><td>To pause habit tracking on days you choose without counting them as missed</td></tr>
+            <tr><td><strong>Apple Sign-In refresh token:</strong> a server-side secret issued by Apple when you sign in with Apple. It is stored in a restricted table that the app client can never access — only our backend can read it, and only for one purpose.</td><td>Required by App Store guidelines to revoke your Apple sign-in when you delete your account, so the app is fully removed from your Apple ID</td></tr>
           </tbody>
         </table>
       </div>
-      <p>Some of this information (for example mood, journal text or the challenges you select during onboarding) may be personal or sensitive. It is used only to provide the features above, it is never shared with anyone for their own purposes, and access is restricted so that each account can read only its own data.</p>
+      <p>Some of this information (for example mood, journal text, gratitude entries, the note on a paused day, or the challenges you select during onboarding) may be personal or sensitive. It is used only to provide the features above, it is never shared with anyone for their own purposes, and access is restricted so that each account can read only its own data.</p>
 
       <h2>2. Data kept only on your device</h2>
       <p>The following is stored locally on your iPhone and is not sent to our servers:</p>
       <ul>
         <li><strong>Tasks</strong> (title, date, time, priority, done/not done).</li>
-        <li><strong>Vacation periods</strong> used for streak protection.</li>
         <li><strong>Preferences:</strong> language, light/dark theme, first day of the week.</li>
+        <li><strong>Notification permission:</strong> whether you have allowed the app to send reminders. This is a system-level permission and is not sent to us.</li>
         <li><strong>Journal drafts:</strong> text you are still typing in the journal is kept on the device until it is saved to your account, then the draft is removed.</li>
+        <li><strong>Tips seen:</strong> which in-app tips you have already seen, so we don't show them again.</li>
         <li><strong>Sign-in session</strong>, so you stay logged in.</li>
-        <li><strong>Cached copies</strong> of your habits, check-ins, schedules and Pro status, so the app works offline.</li>
+        <li><strong>Cached copies</strong> of your habits, check-ins, schedules and paused days, so the app works offline.</li>
         <li><strong>A technical server identifier</strong> recording which of our servers the app last connected to. It contains no personal data.</li>
       </ul>
-      <p>When you sign out or delete your account, the app removes your personal data from the device, including cached data, journal drafts, tasks and vacation periods. Your language, theme and week-start preferences stay on the device. If the app detects that it is connected to a different server than before (for example on the first launch after installing), it signs out and clears any previously cached user data from the device as a safety measure.</p>
-      <p>Deleting the app removes all local data. Tasks and vacation periods are not backed up by us, so they cannot be recovered once removed.</p>
+      <p>When you sign out or delete your account, the app removes your personal data from the device, including cached data, journal drafts and tasks. Your language, theme and week-start preferences stay on the device. If the app detects that it is connected to a different server than before (for example on the first launch after installing), it signs out and clears any previously cached user data from the device as a safety measure.</p>
+      <p>Deleting the app removes all local data. Tasks are not backed up by us, so they cannot be recovered once removed.</p>
 
       <h2>3. Notifications</h2>
       <p>If you turn on a reminder for a habit, the app asks for permission to send notifications. Reminders are scheduled <strong>locally on your device</strong>; we do not use a push-notification server and do not collect a push token. The reminder time is saved with the habit so it is restored on your account.</p>
 
       <h2>4. Third-party services</h2>
       <p>The app uses the following third-party services. <strong>Supabase</strong> (database and authentication) stores your account and app data on our behalf to run the app; data is sent to Supabase over an encrypted connection (HTTPS). <strong>Sentry</strong> (Functional Software, Inc.) receives error and crash reports for diagnostic purposes only, as described below.</p>
-      <p>If you use <strong>Sign in with Apple</strong>, Apple verifies your identity and shares your name and email (or private relay address) with us, as described in section 1. Apple's handling of your Apple ID is covered by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
-      <p>We use <strong>Sentry</strong> (Functional Software, Inc.) to receive reports when the app crashes or an error occurs, for example when saving fails. A report contains your account ID (a random identifier — not your email or name), your device model, operating system version, app version, and technical details about the error. Before a report is sent, the app removes database contents and email addresses from error messages; your habits, journal entries and mood data are never included, and no screenshots or recordings are taken. Error reporting is off in development builds. Sentry stores this data in the United States for a limited period under its retention policy. See <a href="https://sentry.io/privacy/">Sentry's privacy policy</a>.</p>
-      <p>The app contains no analytics, advertising or tracking SDKs. When we add further services in the future — for example in-app purchases processed by Apple — they will be listed here before they are used, together with what data they receive.</p>
+      <p>If you use <strong>Sign in with Apple</strong>, Apple verifies your identity and shares your name and email (or private relay address) with us, as described in section 1. When you sign in with Apple, Apple also issues a refresh token that our backend stores in a restricted, server-only table so it can revoke your Apple sign-in when you delete your account (see section 6). Apple's handling of your Apple ID is covered by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
+      <p>We use <strong>Sentry</strong> (Functional Software, Inc.) to receive reports when the app crashes or an error occurs, for example when saving fails. A report contains your account ID (a random identifier — not your email or name), your device model, operating system version, app version, and technical details about the error. Before a report is sent, the app removes database contents and email addresses from error messages; your habits, journal entries, gratitude notes and mood data are never included, and no screenshots or recordings are taken. Error reporting is off in development builds. Sentry stores this data in the United States for a limited period under its retention policy. See <a href="https://sentry.io/privacy/">Sentry's privacy policy</a>.</p>
+      <p>The app contains no analytics, advertising or tracking SDKs.</p>
 
       <h2>5. What we don't do</h2>
       <ul>
         <li>We do not sell or rent your data.</li>
         <li>We do not use your data for advertising or share it with advertisers or data brokers.</li>
         <li>We do not track you across other apps or websites.</li>
+        <li>The current version of the app has no in-app purchases.</li>
         <li>This website uses no cookies, analytics or third-party scripts.</li>
       </ul>
 
       <h2>6. Deleting your account and data</h2>
-      <p>In the app, go to <strong>Settings → Delete Account</strong> and confirm. This permanently deletes your account and all of the data listed in section 1 from our database. It cannot be undone. If you cannot access the app, email <a href="mailto:becoming.support@gmail.com">becoming.support@gmail.com</a> from the address linked to your account and we will delete it for you.</p>
-      <p>Deleting your account also removes your data from the device, and deletes your account even if you signed in with Apple. You can additionally stop using Sign in with Apple for Becoming in your iPhone Settings → <em>your name</em> → Sign in with Apple.</p>
-      <p>Deleting your account does not cancel an App Store subscription; cancel it in your Apple ID settings.</p>
+      <p>In the app, go to <strong>Settings → Delete Account</strong> and confirm. This permanently deletes your account and all of the data listed in section 1 from our database — including journal entries, gratitude notes, paused days and goals. It cannot be undone. If you cannot access the app, email <a href="mailto:becoming.support@gmail.com">becoming.support@gmail.com</a> from the address linked to your account and we will delete it for you.</p>
+      <p>Deleting your account also removes your data from the device, and revokes your Sign in with Apple authorisation for Becoming — the Apple refresh token is used to call Apple's revocation endpoint and is then deleted. You can also stop using Sign in with Apple for Becoming at any time in your iPhone Settings → <em>your name</em> → Sign in with Apple.</p>
 
       <h2>7. Data retention</h2>
       <p>We keep your data for as long as your account exists. When you delete your account, your data is removed from the active database immediately. It may persist for a limited period in our hosting provider's infrastructure backups before being permanently removed. Error reports already sent to Sentry are not linked to any remaining account after deletion and are deleted automatically when Sentry's retention period ends.</p>
@@ -107,7 +111,7 @@
       <p>The app is not directed to children under 13, and we do not knowingly collect data from them. If you believe a child under 13 has created an account, contact us and we will delete it.</p>
 
       <h2>10. Changes to this policy</h2>
-      <p>If we change this policy, we will update the effective date above and, for significant changes, let you know in the app.</p>
+      <p>If we change this policy, we will update the effective date above and, for significant changes, highlight the change at the top of this page.</p>
 
       <h2>11. Contact</h2>
       <p>Enzo Moretti<br>
@@ -117,9 +121,9 @@
     <!-- ───────────── PORTUGUÊS ───────────── -->
     <section class="lang" id="pt" lang="pt-BR">
       <h1>Política de Privacidade</h1>
-      <p class="meta">Data de vigência: 14 de outubro de 2026</p>
+      <p class="meta">Data de vigência: 6 de novembro de 2026</p>
 
-      <p>Esta política explica quais dados o <strong>Becoming</strong> (“o app”, “nós”) coleta, por quê e onde eles ficam guardados. O app é operado por Enzo Moretti, Sioux Falls, South Dakota, USA.</p>
+      <p>Esta política explica quais dados o <strong>Becoming</strong> ("o app", "nós") coleta, por quê e onde eles ficam guardados. O app é operado por Enzo Moretti, Sioux Falls, South Dakota, USA.</p>
 
       <div class="card">
         <p><strong>Resumo</strong></p>
@@ -140,57 +144,61 @@
           </thead>
           <tbody>
             <tr><td><strong>Conta (login com e-mail):</strong> e-mail e senha (a senha é tratada pela Supabase Authentication e guardada apenas em formato criptografado/hash)</td><td>Para fazer seu login e vincular seus dados à sua conta</td></tr>
-            <tr><td><strong>Conta (Iniciar sessão com a Apple):</strong> o nome e o e-mail que a Apple compartilha conosco. Se você escolher “Ocultar meu e-mail”, será um endereço de retransmissão privado criado pela Apple, não seu e-mail real. A Apple compartilha seu nome apenas no primeiro login, e só se você permitir.</td><td>Para fazer seu login e mostrar seu nome no app. O token de identidade emitido pela Apple é usado apenas para verificar seu login e para nada mais</td></tr>
-            <tr><td><strong>Perfil:</strong> nome de exibição, e-mail, profissão(ões), se o onboarding foi concluído, se você tem Pro</td><td>Para personalizar o app, mostrar as telas certas e liberar recursos Pro</td></tr>
+            <tr><td><strong>Conta (Iniciar sessão com a Apple):</strong> o nome e o e-mail que a Apple compartilha conosco. Se você escolher "Ocultar meu e-mail", será um endereço de retransmissão privado criado pela Apple, não seu e-mail real. A Apple compartilha seu nome apenas no primeiro login, e só se você permitir.</td><td>Para fazer seu login e mostrar seu nome no app. O token de identidade emitido pela Apple é usado apenas para verificar seu login e não é armazenado</td></tr>
+            <tr><td><strong>Perfil:</strong> nome de exibição, e-mail e se o onboarding foi concluído</td><td>Para personalizar o app e mostrar as telas certas</td></tr>
             <tr><td><strong>Respostas do onboarding</strong> (salvas ao concluir o onboarding): faixa etária, desafios escolhidos (ex.: procrastinação, sono, foco, ansiedade), objetivos, intensidade preferida, profissão(ões)</td><td>Para sugerir hábitos adequados a você</td></tr>
             <tr><td><strong>Hábitos:</strong> nome, descrição, categoria, cor, ícone, frequência e agenda (dias, meta semanal), horário e status do lembrete, data de arquivamento, modelo usado</td><td>Para exibir e acompanhar seus hábitos</td></tr>
             <tr><td><strong>Histórico de agenda do hábito:</strong> mudanças de frequência e a data em que passam a valer</td><td>Para calcular sequências e estatísticas corretamente após alterações</td></tr>
             <tr><td><strong>Check-ins:</strong> datas em que cada hábito foi concluído, nota opcional e status (concluído ou folga)</td><td>Para mostrar progresso, sequências e estatísticas</td></tr>
             <tr><td><strong>Registros de humor:</strong> data e valor do humor (1–5)</td><td>Para mostrar seu histórico e gráficos de humor</td></tr>
-            <tr><td><strong>Entradas do diário:</strong> data, tipo (escrita livre, reflexão, pergunta da semana), o texto que você escreve e a pergunta exibida</td><td>Para manter seu diário</td></tr>
+            <tr><td><strong>Entradas do diário:</strong> data, tipo (escrita livre, Lição do dia, reflexão, pergunta da semana), o texto que você escreve e a pergunta exibida nas entradas de pergunta semanal. Todos os textos do diário são armazenados na mesma tabela com sua etiqueta de tipo.</td><td>Para manter seu diário</td></tr>
+            <tr><td><strong>Entradas de gratidão:</strong> data e até três textos curtos que você escreve por dia na seção Gratidão do diário</td><td>Para manter seu diário de gratidão</td></tr>
             <tr><td><strong>Metas do dia:</strong> data, texto, concluída ou não</td><td>Para mostrar as metas do dia no diário</td></tr>
-            <tr><td><strong>Objetivos:</strong> título, prazo (curto/médio/longo), data-alvo, data de conclusão e os passos que você adiciona</td><td>Para acompanhar seus objetivos de longo prazo</td></tr>
-            <tr><td><strong>Dias especiais:</strong> data, tipo (competição, viagem, descanso, feriado, outro), nota opcional</td><td>Para marcar folgas sem quebrar suas sequências</td></tr>
+            <tr><td><strong>Objetivos e passos:</strong> título do objetivo, prazo (curto/médio/longo), data-alvo opcional, data de conclusão e os textos dos passos que você adiciona a cada objetivo</td><td>Para acompanhar seus objetivos de longo prazo</td></tr>
+            <tr><td><strong>Dias especiais:</strong> data, tipo (competição, viagem, descanso, feriado, outro), nota opcional</td><td>Para marcar dias notáveis no seu diário, na tela de detalhes do hábito e nas estatísticas</td></tr>
+            <tr><td><strong>Dias pausados:</strong> data, motivo (viagem, doença, descanso) e uma nota curta opcional (até 140 caracteres)</td><td>Para pausar o acompanhamento de hábitos nos dias que você escolher, sem contá-los como dias perdidos</td></tr>
+            <tr><td><strong>Token de atualização da Apple (Iniciar sessão com a Apple):</strong> um segredo gerado pela Apple quando você faz login com a Apple. Ele fica armazenado em uma tabela restrita que o app nunca acessa — apenas nosso servidor pode lê-lo, e apenas para uma finalidade.</td><td>Exigido pelas diretrizes da App Store para revogar seu login com a Apple quando você exclui a conta, removendo o app completamente do seu ID Apple</td></tr>
           </tbody>
         </table>
       </div>
-      <p>Algumas dessas informações (como humor, textos do diário ou os desafios escolhidos no onboarding) podem ser pessoais ou sensíveis. Elas são usadas apenas para as funções acima, nunca são compartilhadas para fins de terceiros, e o acesso é restrito para que cada conta leia somente os próprios dados.</p>
+      <p>Algumas dessas informações (como humor, textos do diário, entradas de gratidão, a nota de um dia pausado ou os desafios escolhidos no onboarding) podem ser pessoais ou sensíveis. Elas são usadas apenas para as funções acima, nunca são compartilhadas para fins de terceiros, e o acesso é restrito para que cada conta leia somente os próprios dados.</p>
 
       <h2>2. Dados mantidos apenas no seu aparelho</h2>
       <p>Os itens abaixo ficam armazenados localmente no seu iPhone e não são enviados aos nossos servidores:</p>
       <ul>
         <li><strong>Tarefas</strong> (título, data, horário, prioridade, concluída ou não).</li>
-        <li><strong>Períodos de férias</strong> usados na proteção de sequências.</li>
         <li><strong>Preferências:</strong> idioma, tema claro/escuro, primeiro dia da semana.</li>
+        <li><strong>Permissão de notificações:</strong> se você autorizou o app a enviar lembretes. É uma permissão do sistema e não é enviada a nós.</li>
         <li><strong>Rascunhos do diário:</strong> o texto que você ainda está digitando no diário fica no aparelho até ser salvo na sua conta; depois o rascunho é removido.</li>
+        <li><strong>Dicas vistas:</strong> quais dicas do app você já visualizou, para não exibi-las novamente.</li>
         <li><strong>Sessão de login</strong>, para você continuar conectado.</li>
-        <li><strong>Cópias em cache</strong> dos seus hábitos, check-ins, agendas e status Pro, para o app funcionar offline.</li>
+        <li><strong>Cópias em cache</strong> dos seus hábitos, check-ins, agendas e dias pausados, para o app funcionar offline.</li>
         <li><strong>Um identificador técnico de servidor</strong> que registra a qual dos nossos servidores o app se conectou por último. Ele não contém dados pessoais.</li>
       </ul>
-      <p>Ao sair da conta ou excluí-la, o app remove seus dados pessoais do aparelho, incluindo cache, rascunhos do diário, tarefas e períodos de férias. Suas preferências de idioma, tema e início da semana continuam no aparelho. Se o app detectar que está conectado a um servidor diferente do anterior (por exemplo, na primeira abertura após a instalação), ele encerra a sessão e apaga do aparelho dados de usuário em cache como medida de segurança.</p>
-      <p>Apagar o app remove todos os dados locais. Tarefas e períodos de férias não têm backup em nossos servidores e não podem ser recuperados depois de removidos.</p>
+      <p>Ao sair da conta ou excluí-la, o app remove seus dados pessoais do aparelho, incluindo cache, rascunhos do diário e tarefas. Suas preferências de idioma, tema e início da semana continuam no aparelho. Se o app detectar que está conectado a um servidor diferente do anterior (por exemplo, na primeira abertura após a instalação), ele encerra a sessão e apaga do aparelho dados de usuário em cache como medida de segurança.</p>
+      <p>Apagar o app remove todos os dados locais. As tarefas não têm backup em nossos servidores e não podem ser recuperadas depois de removidas.</p>
 
       <h2>3. Notificações</h2>
       <p>Se você ativar um lembrete para um hábito, o app pede permissão para enviar notificações. Os lembretes são agendados <strong>localmente no aparelho</strong>; não usamos servidor de notificações push e não coletamos token de push. O horário do lembrete é salvo junto com o hábito para ser restaurado na sua conta.</p>
 
       <h2>4. Serviços de terceiros</h2>
       <p>O app usa os seguintes serviços de terceiros. A <strong>Supabase</strong> (banco de dados e autenticação) armazena sua conta e os dados do app em nosso nome para o app funcionar; os dados são enviados à Supabase por conexão criptografada (HTTPS). O <strong>Sentry</strong> (Functional Software, Inc.) recebe relatórios de erros e falhas apenas para fins de diagnóstico, conforme descrito abaixo.</p>
-      <p>Se você usar <strong>Iniciar sessão com a Apple</strong>, a Apple verifica sua identidade e compartilha conosco seu nome e e-mail (ou endereço de retransmissão privado), como descrito na seção 1. O tratamento do seu ID Apple pela Apple segue a <a href="https://www.apple.com/br/legal/privacy/">Política de Privacidade da Apple</a>.</p>
-      <p>Usamos o <strong>Sentry</strong> (Functional Software, Inc.) para receber relatórios quando o app trava ou ocorre um erro — por exemplo, quando um salvamento falha. Um relatório contém seu ID de conta (um identificador aleatório — não seu e-mail nem seu nome), o modelo do aparelho, a versão do sistema operacional, a versão do app e detalhes técnicos sobre o erro. Antes de enviar um relatório, o app remove conteúdos de banco de dados e endereços de e-mail das mensagens de erro; seus hábitos, entradas do diário e dados de humor nunca são incluídos, e nenhuma captura de tela ou gravação é feita. O relatório de erros está desativado em builds de desenvolvimento. O Sentry armazena esses dados nos Estados Unidos por um período limitado conforme sua política de retenção. Consulte a <a href="https://sentry.io/privacy/">política de privacidade do Sentry</a>.</p>
-      <p>O app não contém SDKs de analytics, publicidade ou rastreamento. Quando adicionarmos outros serviços no futuro — por exemplo compras no app processadas pela Apple — eles serão listados aqui antes de serem usados, junto com os dados que recebem.</p>
+      <p>Se você usar <strong>Iniciar sessão com a Apple</strong>, a Apple verifica sua identidade e compartilha conosco seu nome e e-mail (ou endereço de retransmissão privado), como descrito na seção 1. Ao fazer login com a Apple, a Apple também emite um token de atualização que nosso servidor armazena em uma tabela restrita — somente para revogar seu login com a Apple quando você excluir a conta (seção 6). O tratamento do seu ID Apple pela Apple segue a <a href="https://www.apple.com/br/legal/privacy/">Política de Privacidade da Apple</a>.</p>
+      <p>Usamos o <strong>Sentry</strong> (Functional Software, Inc.) para receber relatórios quando o app trava ou ocorre um erro — por exemplo, quando um salvamento falha. Um relatório contém seu ID de conta (um identificador aleatório — não seu e-mail nem seu nome), o modelo do aparelho, a versão do sistema operacional, a versão do app e detalhes técnicos sobre o erro. Antes de enviar um relatório, o app remove conteúdos de banco de dados e endereços de e-mail das mensagens de erro; seus hábitos, entradas do diário, anotações de gratidão e dados de humor nunca são incluídos, e nenhuma captura de tela ou gravação é feita. O relatório de erros está desativado em builds de desenvolvimento. O Sentry armazena esses dados nos Estados Unidos por um período limitado conforme sua política de retenção. Consulte a <a href="https://sentry.io/privacy/">política de privacidade do Sentry</a>.</p>
+      <p>O app não contém SDKs de analytics, publicidade ou rastreamento.</p>
 
       <h2>5. O que não fazemos</h2>
       <ul>
         <li>Não vendemos nem alugamos seus dados.</li>
         <li>Não usamos seus dados para publicidade nem os compartilhamos com anunciantes ou corretores de dados.</li>
         <li>Não rastreamos você em outros apps ou sites.</li>
+        <li>A versão atual do app não tem compras no aplicativo.</li>
         <li>Este site não usa cookies, analytics nem scripts de terceiros.</li>
       </ul>
 
       <h2>6. Excluir sua conta e seus dados</h2>
-      <p>No app, vá em <strong>Configurações → Excluir Conta</strong> e confirme. Isso exclui permanentemente sua conta e todos os dados listados na seção 1 do nosso banco de dados. Não é possível desfazer. Se não conseguir acessar o app, envie um e-mail para <a href="mailto:becoming.support@gmail.com">becoming.support@gmail.com</a> a partir do endereço vinculado à sua conta e faremos a exclusão para você.</p>
-      <p>Excluir a conta também remove seus dados do aparelho e exclui a conta mesmo que você tenha entrado com a Apple. Você também pode parar de usar o login com a Apple para o Becoming em Ajustes do iPhone → <em>seu nome</em> → Iniciar sessão com a Apple.</p>
-      <p>Excluir a conta não cancela uma assinatura da App Store; cancele nos ajustes do seu ID Apple.</p>
+      <p>No app, vá em <strong>Configurações → Excluir Conta</strong> e confirme. Isso exclui permanentemente sua conta e todos os dados listados na seção 1 do nosso banco de dados — incluindo entradas do diário, anotações de gratidão, dias pausados e objetivos. Não é possível desfazer. Se não conseguir acessar o app, envie um e-mail para <a href="mailto:becoming.support@gmail.com">becoming.support@gmail.com</a> a partir do endereço vinculado à sua conta e faremos a exclusão para você.</p>
+      <p>Excluir a conta também remove seus dados do aparelho e revoga sua autorização de Iniciar sessão com a Apple para o Becoming — o token de atualização da Apple é usado para chamar o endpoint de revogação da Apple e depois é excluído. Você também pode parar de usar o login com a Apple para o Becoming a qualquer momento em Ajustes do iPhone → <em>seu nome</em> → Iniciar sessão com a Apple.</p>
 
       <h2>7. Retenção de dados</h2>
       <p>Mantemos seus dados enquanto sua conta existir. Ao excluir a conta, os dados são removidos do banco de dados ativo imediatamente. Eles podem permanecer por um período limitado nos backups de infraestrutura do nosso provedor de hospedagem antes de serem removidos definitivamente. Relatórios de erro já enviados ao Sentry não ficam vinculados a nenhuma conta após a exclusão e são excluídos automaticamente quando o período de retenção do Sentry encerrar.</p>
@@ -202,7 +210,7 @@
       <p>O app não é direcionado a crianças menores de 13 anos, e não coletamos dados delas intencionalmente. Se você acredita que uma criança menor de 13 anos criou uma conta, fale conosco e a excluiremos.</p>
 
       <h2>10. Alterações nesta política</h2>
-      <p>Se alterarmos esta política, atualizaremos a data de vigência acima e, em mudanças relevantes, avisaremos no app.</p>
+      <p>Se alterarmos esta política, atualizaremos a data de vigência acima e, em mudanças relevantes, destacaremos a mudança no topo desta página.</p>
 
       <h2>11. Contato</h2>
       <p>Enzo Moretti<br>
